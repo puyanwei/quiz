@@ -8,7 +8,7 @@ interface CardProps extends Component {
 export function Card({ className, children, testId = "card" }: CardProps) {
   return (
     <div
-      className={`rounded-lg py-8 px-6 bg-blue-400 text-white  ${className}`}
+      className={`rounded-lg p-8 bg-blue-400 text-white text-center min-h-[500px] ${className}`}
       data-testid={testId}
     >
       {children}

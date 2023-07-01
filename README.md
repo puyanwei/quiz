@@ -1,34 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quiz
 
-## Getting Started
+### Task
 
-First, run the development server:
+Create a webapp that allows a user to answer questions. Once the user has finished answering all questions, present
+the user with their score. The webapp needs to follow the below requirements.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- The user must see only one question at a time. The webapp should transition from one question to another and not show all questions at once.
+- It must be written in typescript and react.
+- Must have a countdown clock that when the time is exceeded removes the current question on the page with some text informing the user their time is up
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Boilerplate
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+If you wish, you can use this project as a starting point. It uses vite so you can write react components right away and has
+some dummy questions in the public directory. You should be able to make a http request in order to grab these.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### To Get Started
 
-## Learn More
+1. `$ npm install `
+2. `$ npm run dev`
 
-To learn more about Next.js, take a look at the following resources:
+### What we are looking for
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Good code design choices and understanding of typescript and react principles
+- Code readability
+- We are mainly looking at the features that have been implemented rather than the visual design

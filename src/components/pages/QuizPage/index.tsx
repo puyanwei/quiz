@@ -8,6 +8,7 @@ import { Component } from "../../../shared/types"
 import { isEmptyObject } from "../../../shared/helpers"
 import { Button } from "../../atoms/Button"
 import { data } from "../../../data/questions"
+import { CountdownTimer } from "../../atoms/CountdownTimer"
 
 interface QuizPageProps extends Component {}
 
@@ -45,6 +46,7 @@ export function QuizPage({ className, testId = "quiz-page" }: QuizPageProps) {
         ))}
         <div className="pb-8"></div>
       </Card>
+      <CountdownTimer duration={60} onTimerEnd={() => setCurrentQuestion(data.length + 1)} />
     </main>
   )
 }

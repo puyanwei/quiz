@@ -23,9 +23,7 @@ export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps
 
   return (
     <main className={`grid place-items-center h-screen ${className}`} data-testid={testId}>
-      {currentQuestion > data.length ? (
-        <EndGameCard score={score} totalQuestions={data.length} />
-      ) : (
+      {currentQuestion < data.length + 1 ? (
         <QuestionCard
           data={data[currentQuestion - 1]}
           currentQuestion={currentQuestion}
@@ -33,6 +31,8 @@ export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps
         >
           <CountdownTimer duration={60} onTimerEnd={() => setCurrentQuestion(data.length + 1)} />
         </QuestionCard>
+      ) : (
+        <EndGameCard score={score} totalQuestions={data.length} />
       )}
     </main>
   )

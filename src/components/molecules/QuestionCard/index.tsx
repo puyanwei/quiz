@@ -31,8 +31,10 @@ export function QuestionCard({
         <Heading>Question {currentQuestion}</Heading>
         <Text>{question}</Text>
         <div className="flex flex-grow" />
-        {answers.map(({ phrasing, isCorrect }) => (
-          <Button onClick={() => handleClick(isCorrect)}>{phrasing}</Button>
+        {answers.map(({ phrasing, isCorrect }, index) => (
+          <Button onClick={() => handleClick(isCorrect)} key={`${phrasing}-${index}`}>
+            {phrasing}
+          </Button>
         ))}
         <div className="pb-8"></div>
       </Card>

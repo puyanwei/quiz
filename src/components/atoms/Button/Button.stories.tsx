@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Component>
 export const Button: Story = {
   render: () => (
     <div>
-      <Component>Button</Component>
+      <Component onClick={() => alert("Button is clicked")}>Button</Component>
     </div>
   ),
 }

@@ -9,6 +9,7 @@ import { isEmptyObject } from "../../../shared/helpers"
 import { Button } from "../../atoms/Button"
 import { data } from "../../../data/questions"
 import { CountdownTimer } from "../../atoms/CountdownTimer"
+import { EndGameCard } from "../../molecules/EndGameCard"
 
 interface QuizPageProps extends Component {}
 
@@ -24,14 +25,7 @@ export function QuizPage({ className, testId = "quiz-page" }: QuizPageProps) {
   }
 
   if (currentQuestion > data.length)
-    return (
-      <main className={`grid place-items-center h-screen ${className}`} data-testid={testId}>
-        <Card className="flex flex-col space-y-4">
-          <Heading>Quiz Completed</Heading>
-          <Text>{`Your final score is ${score}/${data.length}`}</Text>
-        </Card>
-      </main>
-    )
+    return <EndGameCard score={score} totalQuestions={data.length} />
 
   const { question, answers } = data[currentQuestion - 1]
 

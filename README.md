@@ -1,6 +1,8 @@
 # Quiz
 
-url - https://quiz-one-omega.vercel.app/
+Website URL - https://quiz-one-omega.vercel.app/
+
+Storybook UI Component library - https://64a17911a5a0651c475f501a-jbmeimlzmv.chromatic.com/
 
 ### Task
 
@@ -11,18 +13,28 @@ the user with their score. The webapp needs to follow the below requirements.
 - It must be written in typescript and react.
 - Must have a countdown clock that when the time is exceeded removes the current question on the page with some text informing the user their time is up
 
-### Boilerplate
+### Tech Stack
 
-If you wish, you can use this project as a starting point. It uses vite so you can write react components right away and has
-some dummy questions in the public directory. You should be able to make a http request in order to grab these.
+- Next.js (Next v13 app folder) and React with Typescript
+- Tailwind for styling
+- Storybook for component library
+- Deployment of Storybook with Chromatic
+- Deployed with Vercel
 
-#### To Get Started
+### Installation
 
-1. `$ npm install `
-2. `$ npm run dev`
+```
+git clone https://github.com/puyanwei/quiz.git
+cd quiz
+yarn install
+yarn dev
+```
 
-### What we are looking for
+To run the Storybook library use the command `yarn run storybook` and then go to `https://localhost:6006`
 
-- Good code design choices and understanding of typescript and react principles
-- Code readability
-- We are mainly looking at the features that have been implemented rather than the visual design
+The deployed live site is at https://quiz-one-omega.vercel.app/.
+A deployed version of Storybook is at https://64a17911a5a0651c475f501a-jbmeimlzmv.chromatic.com/
+
+### Process
+
+### Conclusion

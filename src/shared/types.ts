@@ -1,11 +1,15 @@
-import { ReactNode } from "react"
-
 export type Component = {
   className?: string
   testId?: string
   styles?: string
 }
 
-export interface ComponentWithChildren extends Component {
-  children: ReactNode
+export type Answers = {
+  phrasing: string
+  isCorrect: boolean
+}
+
+export type Quiz = {
+  question: string
+  answers: readonly Answers[]
 }

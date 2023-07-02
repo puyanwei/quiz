@@ -1,12 +1,4 @@
-type Answers = {
-  phrasing: string
-  isCorrect: boolean
-}
-
-type Quiz = {
-  question: string
-  answers: readonly Answers[]
-}
+import { Quiz } from "@/shared/types"
 
 export const data = [
   {

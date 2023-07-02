@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react"
 import { EndGameCard as Component } from "."
 
 const meta: Meta<typeof Component> = {
-  title: "Molecules/EndGameCard",
+  title: "Molecules/End Game Card",
   component: Component,
 }
 

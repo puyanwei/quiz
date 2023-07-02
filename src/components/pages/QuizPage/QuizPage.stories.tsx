@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react"
 import { QuizPage as Component } from "."
 
 const meta: Meta<typeof Component> = {
-  title: "Pages/QuizPage",
+  title: "Pages/Quiz Page",
   component: Component,
 }
 

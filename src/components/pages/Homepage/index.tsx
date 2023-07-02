@@ -6,7 +6,7 @@ import Link from "next/link"
 
 interface HomepageProps extends Component {}
 
-export function Homepage({ className, testId = "homepage" }: HomepageProps) {
+export function Homepage({ className = "", testId = "homepage" }: HomepageProps) {
   return (
     <main className={`grid place-items-center h-screen ${className}`} data-testid={testId}>
       <Card className="flex flex-col space-y-4">

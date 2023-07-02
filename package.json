@@ -10,7 +10,8 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_942e1e01b1e2a9f"
+    "chromatic": "npx chromatic --project-token=chpt_942e1e01b1e2a9f",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@types/node": "20.3.3",

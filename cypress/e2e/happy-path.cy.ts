@@ -1,12 +1,15 @@
+// const url = `https://quiz-one-omega.vercel.app/`
+const url = `http://localhost:3000`
+
 describe("Happy path", () => {
-  it("displays the correct message", () => {
-    cy.visit("http://localhost:3000")
+  it("Completes the quiz with all the correct answers", () => {
+    cy.visit(url)
     cy.get('[data-testid="homepage"]').should(
       "contain",
       "You will have 1 minute to complete the quiz."
     )
     cy.get('[data-testid="start-quiz"]').click()
-    cy.url().should("eq", "http://localhost:3000/quiz")
+    cy.url().should("eq", `${url}/quiz`)
     cy.get('[data-testid="question-card-1"]').should("contain", "What is the capital of UK")
     cy.wait(1000)
     cy.get('[data-testid="button-london"]').click()

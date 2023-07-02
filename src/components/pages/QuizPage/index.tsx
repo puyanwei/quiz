@@ -10,7 +10,7 @@ import { QuestionCard } from "../../molecules/QuestionCard"
 
 interface QuizPageProps extends Component {}
 
-export function QuizPage({ className, testId = "quiz-page" }: QuizPageProps) {
+export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps) {
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const [score, setScore] = useState(0)
 

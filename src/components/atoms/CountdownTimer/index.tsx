@@ -6,7 +6,12 @@ interface CountdownTimerProps extends Component {
   onTimerEnd: () => void
 }
 
-export function CountdownTimer({ className, testId, duration, onTimerEnd }: CountdownTimerProps) {
+export function CountdownTimer({
+  className = "",
+  testId,
+  duration,
+  onTimerEnd,
+}: CountdownTimerProps) {
   const [timeRemaining, setTimeRemaining] = useState(duration)
 
   useEffect(() => {

@@ -20,6 +20,7 @@ the user with their score. The webapp needs to follow the below requirements.
 - Storybook for component library
 - Deployment of Storybook with Chromatic
 - Deployed with Vercel
+- Cypress end to end testing
 
 ### Installation
 
@@ -34,6 +35,8 @@ To run the Storybook library use the command `yarn run storybook` and then go to
 
 The deployed live site is at https://quiz-one-omega.vercel.app/.
 A deployed version of Storybook is at https://64a17911a5a0651c475f501a-jbmeimlzmv.chromatic.com/
+
+To use Cypress testing run `yarn run cypress` to open Cypress. Then within the application click the test to run it.
 
 ### Process
 

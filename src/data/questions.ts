@@ -2,7 +2,7 @@ import { Quiz } from "@/shared/types"
 
 export const data = [
   {
-    question: "What's the capital of the UK",
+    question: "What is the capital of UK",
     answers: [
       {
         phrasing: "London",
@@ -23,7 +23,7 @@ export const data = [
     ],
   },
   {
-    question: "What's the capital of the France",
+    question: "What is the capital of France",
     answers: [
       {
         phrasing: "London",
@@ -44,7 +44,7 @@ export const data = [
     ],
   },
   {
-    question: "What's the capital of the Spain",
+    question: "What is the capital of Spain",
     answers: [
       {
         phrasing: "London",
@@ -65,7 +65,7 @@ export const data = [
     ],
   },
   {
-    question: "What's the capital of Germany",
+    question: "What is the capital of Germany",
     answers: [
       {
         phrasing: "London",
@@ -86,7 +86,7 @@ export const data = [
     ],
   },
   {
-    question: "What's the capital of Japan",
+    question: "What is the capital of Japan",
     answers: [
       {
         phrasing: "London",
@@ -107,7 +107,7 @@ export const data = [
     ],
   },
   {
-    question: "What's the capital of the USA",
+    question: "What is the capital of USA",
     answers: [
       {
         phrasing: "London",

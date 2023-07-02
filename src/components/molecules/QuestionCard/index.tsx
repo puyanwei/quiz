@@ -36,6 +36,7 @@ export function QuestionCard({
             className="w-40 mx-auto text-xl"
             onClick={() => handleClick(isCorrect)}
             key={`${phrasing}-${index}`}
+            testId={`button-${phrasing.toLowerCase()}`}
           >
             {phrasing}
           </Button>

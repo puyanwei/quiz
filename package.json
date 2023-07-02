@@ -2,6 +2,7 @@
   "name": "quiz",
   "version": "0.1.0",
   "private": true,
+  "_id": "quiz@0.1.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -35,9 +36,8 @@
     "@storybook/react": "^7.0.24",
     "@storybook/testing-library": "^0.0.14-next.2",
     "chromatic": "^6.19.9",
+    "cypress": "12.16.0",
     "eslint-plugin-storybook": "^0.6.12",
     "storybook": "^7.0.24"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "quiz@0.1.0"
+  }
 }

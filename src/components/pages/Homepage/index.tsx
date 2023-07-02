@@ -18,6 +18,7 @@ export function Homepage({ className, testId = "homepage" }: HomepageProps) {
           <Link
             className="w-40 px-6 py-4 text-xl font-medium text-white rounded-lg cursor-pointer bg-zinc-900 hover:bg-indigo-500 hover:text-white focus:ring-4"
             href="/quiz"
+            data-testid="start-quiz"
           >
             Start
           </Link>

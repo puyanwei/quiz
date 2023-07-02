@@ -5,7 +5,7 @@ interface HeadingProps extends Component {
   children: ReactNode
 }
 
-export function Heading({ className, children, testId = "heading" }: HeadingProps) {
+export function Heading({ className = "", children, testId = "heading" }: HeadingProps) {
   return (
     <h1 className={`text-7xl ${className}`} data-testid={testId}>
       {children}

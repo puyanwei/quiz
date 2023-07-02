@@ -2,7 +2,7 @@
 
 Website URL - https://quiz-one-omega.vercel.app/
 
-Storybook UI Component library - https://64a17911a5a0651c475f501a-jbmeimlzmv.chromatic.com/
+Storybook UI Component library - https://64a17911a5a0651c475f501a-cxjmegexvh.chromatic.com/
 
 ### Task
 

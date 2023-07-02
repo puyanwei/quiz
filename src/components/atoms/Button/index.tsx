@@ -9,7 +9,7 @@ interface ButtonProps extends Component {
 export function Button({ className, children, testId = "button", onClick }: ButtonProps) {
   return (
     <button
-      className={`px-4 py-2 text-xs font-medium text-white rounded-lg cursor-pointer bg-zinc-900 hover:bg-indigo-500 hover:text-white focus:ring-4 ${className}`}
+      className={`px-6 py-4 text-xs font-medium text-white rounded-lg cursor-pointer bg-zinc-900 hover:bg-indigo-500 hover:text-white focus:ring-4 ${className}`}
       data-testid={testId}
       onClick={onClick}
     >

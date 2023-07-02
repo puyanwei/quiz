@@ -32,7 +32,11 @@ export function QuestionCard({
         <Text>{question}</Text>
         <div className="flex flex-grow" />
         {answers.map(({ phrasing, isCorrect }, index) => (
-          <Button onClick={() => handleClick(isCorrect)} key={`${phrasing}-${index}`}>
+          <Button
+            className="w-40 mx-auto text-xl"
+            onClick={() => handleClick(isCorrect)}
+            key={`${phrasing}-${index}`}
+          >
             {phrasing}
           </Button>
         ))}

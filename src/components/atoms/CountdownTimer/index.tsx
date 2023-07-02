@@ -19,9 +19,7 @@ export function CountdownTimer({ className, testId, duration, onTimerEnd }: Coun
       })
     }, 1000)
 
-    return () => {
-      clearInterval(interval)
-    }
+    return () => clearInterval(interval)
   }, [duration, onTimerEnd])
 
   function formatTime(time: number): string {
@@ -33,7 +31,7 @@ export function CountdownTimer({ className, testId, duration, onTimerEnd }: Coun
   }
 
   return (
-    <div className={`text-5xl ${className}`} data-testid={testId}>
+    <div className={`text-5xl text-white ${className}`} data-testid={testId}>
       {formatTime(timeRemaining)}
     </div>
   )

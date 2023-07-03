@@ -35,7 +35,7 @@ export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps
           currentQuestion={currentQuestion}
           handleClick={handleClick}
         >
-          <CountdownTimer duration={5} onTimerEnd={() => handleTimerEnd()} />
+          <CountdownTimer duration={60} onTimerEnd={() => handleTimerEnd()} />
         </QuestionCard>
       ) : (
         <EndGameCard score={score} totalQuestions={data.length} isTimeUp={isTimeUp} />

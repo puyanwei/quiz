@@ -6,11 +6,13 @@ import { Component } from "../../../shared/types"
 interface EndGameCardProps extends Component {
   score: number
   totalQuestions: number
+  isTimeUp: boolean
 }
 
 export function EndGameCard({
   score,
   totalQuestions,
+  isTimeUp,
   className = "",
   testId = "end-game-card",
 }: EndGameCardProps) {
@@ -25,6 +27,7 @@ export function EndGameCard({
     <Card className={`flex flex-col space-y-4 ${className}`} testId={testId}>
       <Heading>Quiz Completed</Heading>
       <div className="flex flex-grow" />
+      {isTimeUp && <Text className="text-xl">You have run out of time!</Text>}
       <Text className="pb-4 text-3xl">{`Your final score is ${score}/${totalQuestions}`}</Text>
       <Text className="pb-4 text-xl">{playerEvaluation(score)}</Text>
     </Card>

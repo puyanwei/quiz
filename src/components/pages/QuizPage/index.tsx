@@ -13,12 +13,18 @@ interface QuizPageProps extends Component {}
 export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps) {
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const [score, setScore] = useState(0)
+  const [isTimeUp, setIsTimeUp] = useState(false)
 
   if (isEmptyObject(data)) throw new Error("Data object is empty")
 
   function handleClick(isCorrect: boolean) {
     if (isCorrect) setScore(score + 1)
     setCurrentQuestion(currentQuestion + 1)
+  }
+
+  function handleTimerEnd() {
+    setCurrentQuestion(data.length + 1)
+    setIsTimeUp(true)
   }
 
   return (
@@ -29,10 +35,10 @@ export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps
           currentQuestion={currentQuestion}
           handleClick={handleClick}
         >
-          <CountdownTimer duration={60} onTimerEnd={() => setCurrentQuestion(data.length + 1)} />
+          <CountdownTimer duration={5} onTimerEnd={() => handleTimerEnd()} />
         </QuestionCard>
       ) : (
-        <EndGameCard score={score} totalQuestions={data.length} />
+        <EndGameCard score={score} totalQuestions={data.length} isTimeUp={isTimeUp} />
       )}
     </main>
   )

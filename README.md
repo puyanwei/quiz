@@ -2,7 +2,7 @@
 
 Website URL - https://quiz-one-omega.vercel.app/
 
-Storybook UI Component library - https://64a17911a5a0651c475f501a-gklkgfvqwu.chromatic.com/
+Storybook UI Component library - https://64a17911a5a0651c475f501a-qxenarqvmh.chromatic.com
 
 <img src="https://github.com/puyanwei/quiz/assets/14803518/d8e8f628-41ac-4214-9e59-33b661b6d4dc" alt="quiz start screenshot" width="600"/>
 <img src="https://github.com/puyanwei/quiz/assets/14803518/cfce6042-84bd-46b8-81f1-01dbfa429944" alt="question screenshot" width="600"/>
@@ -74,3 +74,4 @@ I also split up each component into its own category in Storybook of Atoms, Mole
 - Link to API and use fetch instead of static data
 - Some state management if json data becomes very large
 - More accessibility focused on key components
+- Chromatic (for Storybook deployment) key put in environment variable and setup automatic continuous intergration for it

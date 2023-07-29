@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Component } from "../../../shared/types"
 import { isEmptyObject } from "../../../shared/helpers"
-import { data } from "../../../data/questions"
+import { data } from "../../../data/hard-questions"
 import { CountdownTimer } from "../../atoms/CountdownTimer"
 import { EndGameCard } from "../../molecules/EndGameCard"
 import { QuestionCard } from "../../molecules/QuestionCard"

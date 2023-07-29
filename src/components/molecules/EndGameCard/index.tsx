@@ -18,8 +18,9 @@ export function EndGameCard({
 }: EndGameCardProps) {
   function playerEvaluation(score: number): string {
     if (score === 0) return "Oh dear... there are no words"
-    if (score < 3) return "You did not pay attention in geography class!"
-    if (score < 5) return "Pretty average"
+    if (score < 4) return "You did not pay attention in geography class!"
+    if (score < 7) return "Pretty average"
+    if (score < 9) return "Impressive knowledge!"
     return "Geography God!"
   }
 

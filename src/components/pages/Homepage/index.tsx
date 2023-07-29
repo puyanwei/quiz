@@ -11,7 +11,10 @@ export function Homepage({ className = "", testId = "homepage" }: HomepageProps)
     <main className={`grid place-items-center h-screen ${className}`} data-testid={testId}>
       <Card className="flex flex-col space-y-4">
         <Heading>Quiz</Heading>
-        <Text className="text-3xl">You will have 1 minute to complete the quiz.</Text>
+        <Text className="text-3xl">
+          You will have 1 minute to complete the quiz on Captial Cities. It is very difficult, good
+          luck!
+        </Text>
         <div className="flex flex-grow" />
         <Text className="pb-8 text-xl">Press start to begin.</Text>
         <div className="pb-8">

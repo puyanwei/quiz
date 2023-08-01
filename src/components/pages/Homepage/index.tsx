@@ -12,7 +12,7 @@ export function Homepage({ className = "", testId = "homepage" }: HomepageProps)
       <Card className="flex flex-col space-y-4">
         <Heading>Quiz</Heading>
         <Text className="text-3xl">
-          You will have 1 minute to complete the quiz on Captial Cities. It is very difficult, good
+          You will have 1 minute to complete the quiz on capital cities. It is very difficult, good
           luck!
         </Text>
         <div className="flex flex-grow" />

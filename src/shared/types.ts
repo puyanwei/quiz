@@ -4,14 +4,14 @@ export type Component = {
   styles?: string
 }
 
-export type Answers = {
+export type Answer = {
   phrasing: string
   isCorrect: boolean
 }
 
 export type Quiz = {
   question: string
-  answers: readonly Answers[]
+  answers: readonly Answer[]
 }
 
 export type UserAnswers = string[] | []

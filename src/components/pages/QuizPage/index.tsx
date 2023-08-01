@@ -7,6 +7,7 @@ import { data } from "@/data/hard-questions"
 import { CountdownTimer } from "@/components/atoms/CountdownTimer"
 import { EndGameCard } from "@/components/molecules/EndGameCard"
 import { QuestionCard } from "@/components/molecules/QuestionCard"
+import { ResultsCard } from "@/components/molecules/ResultsCard"
 
 interface QuizPageProps extends Component {}
 
@@ -41,7 +42,10 @@ export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps
           <CountdownTimer duration={60} onTimerEnd={() => handleTimerEnd()} />
         </QuestionCard>
       ) : (
-        <EndGameCard score={score} totalQuestions={data.length} isTimeUp={isTimeUp} />
+        <div className="flex gap-4">
+          <EndGameCard score={score} totalQuestions={data.length} isTimeUp={isTimeUp} />
+          <ResultsCard data={data} answers={answers} />
+        </div>
       )}
     </main>
   )

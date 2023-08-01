@@ -20,9 +20,10 @@ Create a webapp that allows a user to answer questions. Once the user has finish
 
 (My Self Initiated Extra Features)
 
-- Results page shows choice made
-- Results page shows correct/incorrect answer
-- Results page show correct answer if user's answer was incorrect
+- Results card added, shown next to the End Game card
+- Results card shows choice made
+- Results card shows correct/incorrect answer
+- Results card show correct answer if user's answer was incorrect
 
 ### Tech Stack
 

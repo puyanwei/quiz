@@ -1,14 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { Component } from "../../../shared/types"
-import { isEmptyObject } from "../../../shared/helpers"
-import { data } from "../../../data/hard-questions"
-import { CountdownTimer } from "../../atoms/CountdownTimer"
-import { EndGameCard } from "../../molecules/EndGameCard"
-import { QuestionCard } from "../../molecules/QuestionCard"
+import { Component, UserAnswers } from "@/shared/types"
+import { isEmptyObject } from "@/shared/helpers"
+import { data } from "@/data/hard-questions"
+import { CountdownTimer } from "@/components/atoms/CountdownTimer"
+import { EndGameCard } from "@/components/molecules/EndGameCard"
+import { QuestionCard } from "@/components/molecules/QuestionCard"
 
-type UserAnswers = string[] | []
 interface QuizPageProps extends Component {}
 
 export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps) {
@@ -29,6 +28,8 @@ export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps
     setCurrentQuestion(data.length + 1)
     setIsTimeUp(true)
   }
+
+  console.log({ answers })
   return (
     <main className={`grid place-items-center h-screen ${className}`} data-testid={testId}>
       {currentQuestion < data.length + 1 ? (

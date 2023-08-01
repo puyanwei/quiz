@@ -13,3 +13,5 @@ export type Quiz = {
   question: string
   answers: readonly Answers[]
 }
+
+export type UserAnswers = string[] | []

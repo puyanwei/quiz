@@ -8,16 +8,19 @@ import { CountdownTimer } from "../../atoms/CountdownTimer"
 import { EndGameCard } from "../../molecules/EndGameCard"
 import { QuestionCard } from "../../molecules/QuestionCard"
 
+type UserAnswers = string[] | []
 interface QuizPageProps extends Component {}
 
 export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps) {
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const [score, setScore] = useState(0)
   const [isTimeUp, setIsTimeUp] = useState(false)
+  const [answers, setAnswers] = useState<UserAnswers>([])
 
   if (isEmptyObject(data)) throw new Error("Data object is empty")
 
-  function handleClick(isCorrect: boolean) {
+  function handleClick(isCorrect: boolean, answer: string) {
+    setAnswers([...answers, answer])
     if (isCorrect) setScore(score + 1)
     setCurrentQuestion(currentQuestion + 1)
   }
@@ -26,7 +29,6 @@ export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps
     setCurrentQuestion(data.length + 1)
     setIsTimeUp(true)
   }
-
   return (
     <main className={`grid place-items-center h-screen ${className}`} data-testid={testId}>
       {currentQuestion < data.length + 1 ? (

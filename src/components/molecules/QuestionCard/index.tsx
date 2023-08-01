@@ -8,7 +8,7 @@ import { Component, Quiz } from "../../../shared/types"
 interface QuestionCardProps extends Component {
   data: Quiz
   currentQuestion: number
-  handleClick: (isCorrect: boolean) => void
+  handleClick: (isCorrect: boolean, answer: string) => void
   children?: ReactNode
 }
 
@@ -34,7 +34,7 @@ export function QuestionCard({
         {answers.map(({ phrasing, isCorrect }, index) => (
           <Button
             className="w-40 mx-auto text-xl"
-            onClick={() => handleClick(isCorrect)}
+            onClick={() => handleClick(isCorrect, phrasing)}
             key={`${phrasing}-${index}`}
             testId={`button-${phrasing.toLowerCase()}`}
           >

@@ -10,7 +10,7 @@ const meta: Meta<typeof Component> = {
 export default meta
 type Story = StoryObj<typeof Component>
 
-const mockAnswers = ["Dushanbe", "Male"]
+const mockAnswers = ["Ulaanbaatar", "Male"]
 
 const mockQuestions = [
   {

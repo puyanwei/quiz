@@ -10,25 +10,27 @@ interface ResultsCardProps extends Component {
 export function ResultsCard({ className, testId, answers, data }: ResultsCardProps) {
   if (!Array.isArray(answers)) throw Error("Answer array is an invalid type")
 
-  function checkAnswer(data: Quiz[], index: number, answer: string): "✔️" | "❌" {
-    const question = data[index]
-    const correctAnswer = question.answers.find((city) => city.isCorrect)?.phrasing
-    return answer === correctAnswer ? "✔️" : "❌"
+  function checkAnswer(answers: readonly Answer[], userAnswer: string): ["✔️" | "❌", string] {
+    const correctAnswer = answers.find((city) => city.isCorrect)?.phrasing || ""
+    return [userAnswer === correctAnswer ? "✔️" : "❌", correctAnswer]
   }
 
   return (
     <Card className={className} testId={testId}>
-      <Text className="text-4xl pb-4">Your Results</Text>
+      <Text className="text-4xl">Your Results</Text>
 
       <div className="flex flex-col gap-2 text-left p-8">
         {answers.length ? (
-          answers.map((answer, index) => (
-            <div key={`${index} - ${answer}}`}>{`Question ${index + 1} - ${answer} ${checkAnswer(
-              data,
-              index,
-              answer
-            )}`}</div>
-          ))
+          answers.map((answer, index) => {
+            const [result, correctAnswer] = checkAnswer(data[index].answers, answer)
+            const resolvedResult = result === "❌" ? `❌ (${correctAnswer})` : "✔️"
+            return (
+              <div key={`${index} - ${answer}`}>
+                <div className="font-bold">{`${index + 1}. ${data[index].question}`}</div>
+                <div className="pb-2"> {`${answer} ${resolvedResult} `}</div>
+              </div>
+            )
+          })
         ) : (
           <div>No results available as you did not answer any questions</div>
         )}

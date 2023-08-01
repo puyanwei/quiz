@@ -30,7 +30,6 @@ export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps
     setIsTimeUp(true)
   }
 
-  console.log({ answers })
   return (
     <main className={`grid place-items-center h-screen ${className}`} data-testid={testId}>
       {currentQuestion < data.length + 1 ? (

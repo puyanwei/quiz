@@ -27,7 +27,6 @@ export function EndGameCard({
   return (
     <Card className={`flex flex-col space-y-4 ${className}`} testId={testId}>
       <Heading>Quiz Completed</Heading>
-      <div className="flex flex-grow" />
       {isTimeUp && <Text className="text-xl">You have run out of time!</Text>}
       <Text className="pb-4 text-3xl">{`Your final score is ${score}/${totalQuestions}`}</Text>
       <Text className="pb-4 text-xl">{playerEvaluation(score)}</Text>

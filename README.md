@@ -2,7 +2,7 @@
 
 Website URL - https://quiz-one-omega.vercel.app/
 
-Storybook UI Component library - https://64a17911a5a0651c475f501a-qxenarqvmh.chromatic.com
+Storybook UI Component library - https://64a17911a5a0651c475f501a-wgqtrqptxo.chromatic.com/
 
 <img src="https://github.com/puyanwei/quiz/assets/14803518/d8e8f628-41ac-4214-9e59-33b661b6d4dc" alt="quiz start screenshot" width="600"/>
 <img src="https://github.com/puyanwei/quiz/assets/14803518/cfce6042-84bd-46b8-81f1-01dbfa429944" alt="question screenshot" width="600"/>
@@ -17,6 +17,12 @@ Create a webapp that allows a user to answer questions. Once the user has finish
 - The user must see only one question at a time. The webapp should transition from one question to another and not show all questions at once.
 - It must be written in typescript and react.
 - Must have a countdown clock that when the time is exceeded removes the current question on the page with some text informing the user their time is up
+
+(My Self Initiated Extra Features)
+
+- Results page shows choice made
+- Results page shows correct/incorrect answer
+- Results page show correct answer if user's answer was incorrect
 
 ### Tech Stack
 

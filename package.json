@@ -40,5 +40,8 @@
     "cypress": "12.16.0",
     "eslint-plugin-storybook": "^0.6.13",
     "storybook": "^7.2.0"
+  },
+  "resolutions": {
+    "string-width": "4.2.3"
   }
 }

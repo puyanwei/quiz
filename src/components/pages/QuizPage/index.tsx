@@ -15,12 +15,12 @@ export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const [score, setScore] = useState(0)
   const [isTimeUp, setIsTimeUp] = useState(false)
-  const [answers, setAnswers] = useState<UserAnswers>([])
+  const [userAnswers, setAnswers] = useState<UserAnswers>([])
 
   if (isEmptyObject(data)) throw new Error("Data object is empty")
 
-  function handleClick(isCorrect: boolean, answer: string) {
-    setAnswers([...answers, answer])
+  function handleClick(isCorrect: boolean, userAnswer: string) {
+    setAnswers([...userAnswers, userAnswer])
     if (isCorrect) setScore(score + 1)
     setCurrentQuestion(currentQuestion + 1)
   }
@@ -43,7 +43,7 @@ export function QuizPage({ className = "", testId = "quiz-page" }: QuizPageProps
       ) : (
         <div className="flex gap-4">
           <EndGameCard score={score} totalQuestions={data.length} isTimeUp={isTimeUp} />
-          <ResultsCard data={data} answers={answers} />
+          <ResultsCard data={data} userAnswers={userAnswers} />
         </div>
       )}
     </main>

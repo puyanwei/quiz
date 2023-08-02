@@ -60,8 +60,8 @@ export const ResultsCard: Story = {
   render: () => (
     <div className="grid h-screen place-items-center">
       <div className="flex gap-8">
-        <Component answers={mockAnswers} data={mockQuestions} />
-        <Component answers={[]} data={mockQuestions} />
+        <Component userAnswers={mockAnswers} data={mockQuestions} />
+        <Component userAnswers={[]} data={mockQuestions} />
       </div>
     </div>
   ),
